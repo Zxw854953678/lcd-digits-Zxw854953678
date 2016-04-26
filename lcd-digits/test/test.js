@@ -4,8 +4,8 @@ describe('unit test',function(){
 
     it('split digit',function(){
       var digitArray = buildDigits(910);
-
       var expectText = [9,1,0];
+
       expect(digitArray).toEqual(expectText);
     });
   });
@@ -28,15 +28,14 @@ describe('unit test',function(){
 
     it('show lcdDigitsString',function(){
       var lcdDigitText = biuldLcdString([9,1,0],allDigitsString);
-
       var expectText = [['._.','|_|','..|'],['...','..|','..|'],['._.','|.|','|_|']];
 
       expect(lcdDigitText).toEqual(expectText);
     });
-
   });
 
   describe('lcdDigits',function(){
+
     it('printLcdDigits',function(){
       var lcdDigits = printLcdDigits([['._.','|_|','..|'],['...','..|','..|'],['._.','|.|','|_|']]);
       var expectText =
@@ -46,12 +45,12 @@ describe('unit test',function(){
 
       expect(lcdDigits).toEqual(expectText);
     });
-
   });
 
 });
 
 describe('Integration testing',function(){
+
   describe('lcd-digits', function() {
     var digits;
     var allDigitsString;
@@ -64,7 +63,6 @@ describe('Integration testing',function(){
     it('should print correct lcd-digits', function() {
 
       spyOn(console, 'log');
-
       printDigit(digits);
 
       var expectText =
@@ -74,6 +72,7 @@ describe('Integration testing',function(){
 
         expect(console.log).toHaveBeenCalledWith(expectText);
     });
+    
   });
 
 });

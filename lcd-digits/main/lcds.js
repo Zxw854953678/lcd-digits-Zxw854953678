@@ -1,12 +1,10 @@
 function printDigit(digit){
-
   var digitsArray = buildDigits(digit);
   var allDigitsString = loadAllDigits();
   var lcdStringArray = biuldLcdString(digitsArray,allDigitsString);
 
   var lcdDigits = printLcdDigits(lcdStringArray);
   console.log(lcdDigits);
-
 }
 
 function buildDigits(digit){
@@ -44,6 +42,7 @@ function loadAllDigits(){
     8:['._.','|_|','|_|'],
     9:['._.','|_|','..|']
   };
+
 }
 
 function printLcdDigits(lcdStringArray){
