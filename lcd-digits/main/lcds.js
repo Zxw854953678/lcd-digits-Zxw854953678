@@ -49,16 +49,17 @@ function printLcdDigits(lcdStringArray){
   var lcdDigits = '';
 
   for(var i=0; i<3; i++){
-    lcdDigits += LcdDigitReceipt(lcdStringArray,i);
+    lcdDigits += lcdDigitReceipt(lcdStringArray,i);
   }
 
   return lcdDigits;
 }
 
-function LcdDigitReceipt(lcdStringArray,index){
+function lcdDigitReceipt(lcdStringArray,index){
   var digitReceipt = '';
 
   for(var j=0; j<lcdStringArray.length; j++){
+
     digitReceipt += lcdStringArray[j][index] ;
     if(j === lcdStringArray.length-1)
       digitReceipt += '\n';
